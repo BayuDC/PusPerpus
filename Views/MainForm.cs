@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PusPerpus.Models;
 
 namespace PusPerpus.Views {
     public partial class MainForm : Form {
@@ -47,6 +48,19 @@ namespace PusPerpus.Views {
             _formUpdate.BookId = Convert.ToInt32(DgvBooks.SelectedRows[0].Cells[0].Value);
             _formCreate.Close();
             _formUpdate.Show();
+        }
+
+        private void BtnDeleteClick(object sender, EventArgs e) {
+            var result = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No) return;
+
+            var bookId = Convert.ToInt32(DgvBooks.SelectedRows[0].Cells[0].Value);
+
+            _db.Books.Remove(_db.Books.Find(bookId));
+            _db.SaveChanges();
+
+            FormLoad(null, null);
         }
     }
 }
