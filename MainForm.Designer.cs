@@ -26,6 +26,7 @@ namespace PusPerpus {
         private void InitializeComponent() {
             this.LblTitle = new System.Windows.Forms.Label();
             this.DgvBooks = new System.Windows.Forms.DataGridView();
+            this.BtnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +54,25 @@ namespace PusPerpus {
             this.DgvBooks.RowHeadersVisible = false;
             this.DgvBooks.RowTemplate.Height = 25;
             this.DgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvBooks.Size = new System.Drawing.Size(756, 488);
+            this.DgvBooks.Size = new System.Drawing.Size(756, 442);
             this.DgvBooks.TabIndex = 1;
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Location = new System.Drawing.Point(672, 509);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(100, 40);
+            this.BtnAdd.TabIndex = 11;
+            this.BtnAdd.Text = "Add Book";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAddClick);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.DgvBooks);
             this.Controls.Add(this.LblTitle);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -79,6 +91,7 @@ namespace PusPerpus {
 
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.DataGridView DgvBooks;
+        private System.Windows.Forms.Button BtnAdd;
     }
 }
 
