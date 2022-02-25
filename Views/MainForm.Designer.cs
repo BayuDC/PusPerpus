@@ -1,5 +1,5 @@
 ﻿
-namespace PusPerpus {
+namespace PusPerpus.Views {
     partial class MainForm {
         /// <summary>
         ///  Required designer variable.

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PusPerpus {
+namespace PusPerpus.Views {
     public partial class MainForm : Form {
 
         private readonly Database _db;
