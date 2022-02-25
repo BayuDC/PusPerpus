@@ -14,10 +14,12 @@ namespace PusPerpus.Views {
         private readonly Database _db;
 
         private FormCreate _formCreate;
+        private FormUpdate _formUpdate;
         public MainForm() {
             InitializeComponent();
             _db = new Database();
             _formCreate = new FormCreate(_db, FormLoad);
+            _formUpdate = new FormUpdate(_db, FormLoad);
         }
 
         private void FormLoad(object sender, EventArgs e) {
@@ -32,7 +34,19 @@ namespace PusPerpus.Views {
             if (_formCreate.IsDisposed) {
                 _formCreate = new FormCreate(_db, FormLoad);
             }
+
+            _formUpdate.Close();
             _formCreate.Show();
+        }
+
+        private void BtnUpdateClick(object sender, EventArgs e) {
+            if (_formUpdate.IsDisposed) {
+                _formUpdate = new FormUpdate(_db, FormLoad);
+            }
+
+            _formUpdate.BookId = Convert.ToInt32(DgvBooks.SelectedRows[0].Cells[0].Value);
+            _formCreate.Close();
+            _formUpdate.Show();
         }
     }
 }

@@ -27,6 +27,7 @@ namespace PusPerpus.Views {
             this.LblTitle = new System.Windows.Forms.Label();
             this.DgvBooks = new System.Windows.Forms.DataGridView();
             this.BtnAdd = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,22 @@ namespace PusPerpus.Views {
             this.BtnAdd.UseVisualStyleBackColor = true;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAddClick);
             // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.Location = new System.Drawing.Point(546, 509);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(120, 40);
+            this.BtnUpdate.TabIndex = 12;
+            this.BtnUpdate.Text = "Update Book";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdateClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.DgvBooks);
             this.Controls.Add(this.LblTitle);
@@ -92,6 +104,7 @@ namespace PusPerpus.Views {
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.DataGridView DgvBooks;
         private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Button BtnUpdate;
     }
 }
 
